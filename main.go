@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+
+	"github.com/gofiber/fiber/v2"
+)
 
 func main() {
 	fmt.Println("Hello, World!")
@@ -13,4 +18,8 @@ func main() {
 
 	// name3 := "Blue Eyes White Dragon"
 	// fmt.Println(name3)
+
+	app := fiber.New()
+
+	log.Fatal(app.Listen(":3000"))
 }
